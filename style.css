@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ff-palanquin: 'Palanquin', sans-serif;
+  --ff-staatliches: 'Staatliches', cursive;
+  font-size: 62.5%;
+  --bg-primary: #a70505fb;
+  --bg-secundary: #800808;
+  --bg-terceary: #000000;
+  --bg-title-h2: #feecfa;
+
+  --tc-h1: #FFFFFF;
+}
+
+.page {
+  max-width: 33.7rem;
+  margin: 0 auto;
+}
+
+Body {
+  background: var(--bg-primary);
+  font-size: 1.6rem;
+  font-family: var(--ff-palanquin);
+}
+
+header {
+  background: var(--bg-terceary);
+  height: 80rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--tc-h1);
+  margin-bottom: 5rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+header h1 {
+  font-family: var(--ff-staatliches);
+  font-size: 4rem;
+  line-height: 4.5rem;
+  height: 10rem;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+header h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  justify-content: center;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 2.0rem;
+  background-color: var(--bg-title-h2);
+  color: var(--bg-terceary);
+  opacity: 0.8;
+  margin: 3rem auto;
+  font-family: var(--ff-staatliches);
+  width: 50%;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  gap: 3.2rem
+}
+
+main .card {
+  position: relative;
+  max-width: 32rem;
+
+  animation-name: downtop;
+  animation-duration: 1s;
+
+  transition: all 400ms;
+}
+
+main .card img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+main .card:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+main .card h2 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  background-color: var(--bg-title-h2);
+  color: var(--color-title-h2);
+
+  font-size: 2rem;
+  line-height: 3.4rem;
+  
+  padding-inline: 2.4rem 2.3rem;
+  border-radius: 2rem;
+
+  opacity: 0.8;
+  animation: topdown 600ms 600ms forwards;
+}
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  margin: 2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  color: var(--bg-terceary);
+  font-weight: 700;
+  text-decoration: none;
+}
